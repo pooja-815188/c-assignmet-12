@@ -1,0 +1,31 @@
+#include<stdio.h>
+int row=2;
+int col=3;
+
+void fun (int arr[row][col])
+{
+    int i,j;
+    printf("array elemets are\n");
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+    }    
+}
+int main()
+{
+    int i,j;
+    int arr[row][col];
+    printf("enter a array elemets \n");
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    fun(arr);
+}
