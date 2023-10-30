@@ -1,0 +1,31 @@
+#include<stdio.h>
+int fun(int *arr,int row,int col)
+{
+    int i,j;
+    printf("array elemets are\n");
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            printf("%d ",*(arr + i*col +j));
+        }
+        printf("\n");
+    }
+    free(arr);
+}
+int main()
+{
+    int row,col;
+    printf("enter a row and col\n");
+    scanf("%d %d",&row,&col);
+    int i,j;
+    int *arr=(int*)malloc(row*col*sizeof(arr));
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            *(arr + i*col +j)=i+j;
+        }
+    }
+    fun(arr,row,col);
+}
